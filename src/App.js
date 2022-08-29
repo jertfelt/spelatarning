@@ -1,29 +1,50 @@
-import {useState} from "react";
+import Dice from "./Dice";
+import Header from "./Header";
+import { useState } from "react";
+import ToDoList from "./TodoList";
+import data from "./data/todos.json";
+import ToDoForm from './ToDoForm';
+
 function App() {
-  const [firstDie, setDiceResult] = useState(2)
-  const [secondDie, setSecondDiceResult] = useState(1);
+  const [ toDoList, setToDoList ] = useState(data);
 
-  const firstDieImg = require(`./assets/dice/${firstDie}.png`)
-  const secondDieImg = require(`./assets/dice/${secondDie}.png`)
+  
+  const handleToggle = (id) => {
+    let mapped = toDoList.map(task => {
+      return task.id === Number(id) ? { ...task, complete: !task.complete } : { ...task};
+    });
+    setToDoList(mapped);
+  }
+  const handleFilter = () => {
+    let filtered = toDoList.filter(task => {
+      return !task.complete;
+    });
+    setToDoList(filtered);
+  }
 
-  const rulla = () => {
-    setDiceResult(Math.floor(Math.random()*6)+1);
-    setSecondDiceResult(Math.floor(Math.random()*6)+1);
+  
+  const addTask = (userInput ) => {
+    let copy = [...toDoList];
+    copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
+    setToDoList(copy);
   }
 
   return (
     <div className="App">
-
+      <Header />
       <div className="content__main">
-        <div className="content__dice">
-        <img src={firstDieImg} alt="Tärning 1" className="tarning" />
-        <img src={secondDieImg} alt="Tärning 2" className="tarning" />
+        <div className="content__todo">
+        <ToDoList toDoList={toDoList} 
+        handleToggle={handleToggle} 
+        handleFilter={handleFilter}/>
+        <ToDoForm addTask={addTask}/>
+        </div>
+      <div className="content__other">
+      <h3>Feeling lucky, punk?</h3> 
+      <div><Dice /></div>
       </div>
-      <span><p>Det blir...{firstDie + secondDie}</p></span>
-      <button className="knapp"
-      onClick={rulla}>Rulla tärningarna!</button>
-      
       </div>
+
     </div>
   );
 }
