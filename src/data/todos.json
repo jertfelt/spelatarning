@@ -1,0 +1,61 @@
+[{
+  "id": 1,
+  "task": "Öva på javascript",
+  "complete": true
+}, {
+  "id": 2,
+  "task": "Rensa skrivbordet",
+  "complete": true
+}, {
+  "id": 3,
+  "task": "Släng skräp",
+  "complete": false
+}, {
+  "id": 4,
+  "task": "Städa ur ryggsäck",
+  "complete": true
+}, {
+  "id": 5,
+  "task": "Ta det lugnt",
+  "complete": false
+}, {
+  "id": 6,
+  "task": "Handla Pepsi Max",
+  "complete": true
+}, {
+  "id": 7,
+  "task": "Fixa disken",
+  "complete": true
+}, {
+  "id": 8,
+  "task": "Skriv packlista ",
+  "complete": false
+}, {
+  "id": 9,
+  "task": "Ta medicin",
+  "complete": true
+}, {
+  "id": 10,
+  "task": "Kolla läget med A",
+  "complete": false
+}, {
+  "id": 11,
+  "task": "ÅTERHÄMTNING",
+  "complete": true
+}, {
+  "id": 12,
+  "task": "Gör matlådor",
+  "complete": true
+}, {
+  "id": 13,
+  "task": "Träna",
+  "complete": false
+}, {
+  "id": 14,
+  "task": "Sortera räkningar",
+  "complete": false
+}, {
+  "id": 15,
+  "task": "Betala räkningar",
+  "complete": false
+}]
