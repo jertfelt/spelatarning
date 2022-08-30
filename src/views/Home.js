@@ -20,6 +20,12 @@ const Home = () => {
     setToDoList(filtered);
   }
 
+  //? här ska jag lägga in, tillsammans med korrigering i data, att man kan sortera efter prioritet
+  // const handleSort = () => {
+  //   let sorted = toDoList.sort((a, b) => a.task.localeCompare(b.task));
+  //   setToDoList(sorted)
+  // }
+
   const addTask = (userInput ) => {
     let copy = [...toDoList];
     copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
@@ -31,7 +37,9 @@ const Home = () => {
     <h2>Att göra:</h2>
   <ToDoList toDoList={toDoList} 
   handleToggle={handleToggle} 
-  handleFilter={handleFilter}/>
+  handleFilter={handleFilter}
+  // handleSort={handleSort}
+  />
   <ToDoForm addTask={addTask}/>
   </div>
    );
