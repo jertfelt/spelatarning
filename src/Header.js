@@ -1,8 +1,10 @@
+import DropdownMenu from "./components/DropdownMenu";
 
 const Header = () => {
   return ( 
-    <header>
+    <header className="header">
       <h1>Välkommen</h1>
+      <DropdownMenu />
     </header>
    );
 }
