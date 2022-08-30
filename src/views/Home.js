@@ -33,6 +33,7 @@ const Home = () => {
   }
 
   return ( 
+    <div className="content__main">
     <div className="content__todo">
     <h2>Att göra:</h2>
   <ToDoList toDoList={toDoList} 
@@ -41,6 +42,7 @@ const Home = () => {
   // handleSort={handleSort}
   />
   <ToDoForm addTask={addTask}/>
+  </div>
   </div>
    );
 }
