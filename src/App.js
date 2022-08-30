@@ -1,4 +1,4 @@
-import Dice from "./Dice";
+import Dice from "./views/Dice";
 import Header from "./Header";
 import { useState } from "react";
 import ToDoList from "./TodoList";
@@ -34,13 +34,16 @@ function App() {
       <Header />
       <div className="content__main">
         <div className="content__todo">
+          <h2>Att göra:</h2>
         <ToDoList toDoList={toDoList} 
         handleToggle={handleToggle} 
         handleFilter={handleFilter}/>
         <ToDoForm addTask={addTask}/>
         </div>
+        
       <div className="content__other">
-      <h3>Feeling lucky, punk?</h3> 
+      <h3>Feeling lucky, punk?</h3>
+      <p>Om du lyckas slå siffran 12 så vinner du ett pris!</p> 
       <div><Dice /></div>
       </div>
       </div>
