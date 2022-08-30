@@ -12,7 +12,8 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/spela-tarning" element={<Dice/>}
+        <Route path="/spela-tarning"
+        element={<Dice/>}
         ></Route>
         <Route path="/kontakt"
         element={<Kontakt/>}>
