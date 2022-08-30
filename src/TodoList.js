@@ -11,7 +11,7 @@ const ToDoList = ({toDoList, handleToggle, handleFilter}) => {
                 )
             })}
             <button 
-            className="knapp"
+            className="todo__clear"
             style={{margin: '10px'}
             } 
             onClick={handleFilter}>
