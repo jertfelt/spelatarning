@@ -13,6 +13,7 @@ const Dice = () => {
     setSecondDiceResult(Math.floor(Math.random()*6)+1);
   }
   return ( 
+    <div className="content__main">
     <div className="content__other">
       <h3>Feeling lucky, punk?</h3>
       <p>Om du lyckas slå siffran 12 så vinner du ett pris!</p> 
@@ -27,6 +28,7 @@ const Dice = () => {
     </article>
   <p>Det blir...{firstDie + secondDie}</p>
   
+  </div>
   </div>
    );
 }
