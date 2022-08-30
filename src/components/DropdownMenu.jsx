@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const DropdownMenu = () => {
   const dropdownRef = useRef(null);
@@ -6,6 +7,7 @@ const DropdownMenu = () => {
   const clickDrop=() => setIsActive(!isActive);
   const clickClose=() => setIsActive(false)
   
+
 
   useEffect(() => {
 
@@ -50,17 +52,35 @@ const DropdownMenu = () => {
         <p>Meny</p>
       </button>
       <nav 
+
       ref={dropdownRef}
-      className={`menu ${isActive ? 'active' : 'inactive'}`}>
+      aria-label="main navigation"
+      className= 
+      {`menu ${isActive ? 'active' : 'inactive'}`}>
         <ul className="dropdown">
           <img 
           onClick={clickClose}
           src="https://cdn0.iconfinder.com/data/icons/octicons/1024/x-512.png"
           alt="Stäng"></img>
-          <li><a href="/">Start</a></li>
-          <li><a href="/spela-tarning">Spela tärning</a></li>
-          <li><a href="/att-gora">Att göra</a></li>
-          
+          <li 
+          ><NavLink className="navbar-item" 
+          to="/">
+            Start 
+          </NavLink>
+          </li>
+          <li 
+          ><NavLink className="navbar-item" 
+           to="/kontakt">
+            Kontakt
+          </NavLink>
+          </li>
+          <li 
+          >
+            <NavLink className="navbar-item" 
+           to="/spela-tarning">
+            Spela tärning
+          </NavLink>
+          </li>
         </ul>
 
       </nav>
