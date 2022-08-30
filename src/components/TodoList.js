@@ -1,13 +1,15 @@
 import ToDo from './Todo';
 
-const ToDoList = ({toDoList, handleToggle, handleFilter}) => {
+const ToDoList = ({toDoList, handleToggle, handleFilter,handleSort}) => {
     return (
         <div className="padding">
             {toDoList.map(todo => {
                 return (
                     <ToDo todo={todo} 
                     handleToggle={handleToggle} 
-                    handleFilter={handleFilter}/>
+                    handleFilter={handleFilter}
+                    // handleSort={handleSort}
+                    />
                 )
             })}
             <button 
@@ -17,6 +19,9 @@ const ToDoList = ({toDoList, handleToggle, handleFilter}) => {
             onClick={handleFilter}>
               Rensa färdiga
             </button>
+            {/* <button className="todo__clear"
+            onClick={handleSort}
+            >Sortera</button> */}
         </div>
     );
 };
