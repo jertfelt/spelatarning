@@ -13,13 +13,15 @@ const ToDoForm = ({ addTask }) => {
         setUserInput("");
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}
+        className="todo__input">
             <input value={userInput} 
+           
             type="text" 
             onChange={handleChange} 
             placeholder="Uppgift"/>
             <button
-            className="knapp">Lägg till</button>
+            >Lägg till</button>
         </form>
     );
 };
