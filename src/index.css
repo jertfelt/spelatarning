@@ -83,13 +83,13 @@ header {
 }
 .menu-button{
   margin-right:5rem;
-  background: #ffffff;
-  border-radius: 90px;
+  background: palegoldenrod;
+  color:black;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 6px;
+  padding: 4px 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   border: none;
   vertical-align: middle;
@@ -105,13 +105,14 @@ header {
   border-radius: 8px;
   position: absolute;
   top: 0px;
-  right: 60px;
+  right: 0px;
   width: 300px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20px);
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  font-size:18px;
 }
 
 .menu.active {
@@ -127,16 +128,24 @@ header {
 }
 
 .menu li {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid black;
 }
 
 .menu li a {
   text-decoration: none;
-  color: #333333;
+  color: black;
   padding: 15px 20px;
   display: block;
+}
+.menu li  :hover{
+  color: darksalmon;
+  background-color: black;
 }
 
 .dropdown img {
   max-height:30px;
+  margin-left:90%;
+}
+.dropdown img:hover{
+  transform: skew(10deg)
 }
